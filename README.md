@@ -8,5 +8,3 @@ Book recommendation systems can help users discover new books that they might no
 
 Overall, a book recommendation system can be a valuable tool for avid readers, book clubs, and anyone looking to discover new and interesting books.
 
-
-This repository contains the group minor project done in 6th Semester of Btech. (Computer Science and Engineering).
