@@ -1,0 +1,40 @@
+footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+footer p {
+    color: #ccc;
+}
+.note {
+    background:white;
+    border-radius: 7px;
+    padding: 10px;
+    width: 240px;
+    float: left;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+.btn-rot{
+    border: transparent;
+    min-height:30px;
+    /*  transform: rotate(30deg); */
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#homeVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
