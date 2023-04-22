@@ -10,7 +10,8 @@
     <title>Book Recommender</title>
 
     <link rel="icon" href="webIcon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="extrastyle.css">
+    <!-- <link rel="stylesheet" href="extrastyle.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='extrastyle.css') }}">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -21,18 +22,20 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
     />
     <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- <link rel="stylesheet" href="css/mdb.min.css" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='mdb.min.css') }}">
+
   </head>
 
   <body>
     <!-- Navbar -->
     <div>
-      <nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
         <!-- Container wrapper -->
         <div class="container-fluid">
       
           <!-- Navbar brand -->
-          <a class="navbar-brand" href="#"><img src="webIcon.png" alt="" style="width:30px; height:30px;"> Book Guide</a>
+          <a class="navbar-brand" href="#"><img src="https://github.com/theabinashpanda/MinorProject_Btech/blob/main/templates/webIcon.png?raw=true" alt="" style="width:30px; height:30px;"> Book Guide</a>
       
           <!-- Toggle button -->
           <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,17 +85,12 @@
   <div
   class=""
   style="
-    background-image: url('https://cdn.dribbble.com/userupload/4255581/file/original-1fd420b4be457443d40d7d73338fe172.jpg?compress=1&resize=1905x1248');
-    height: 100vh;
+    /* background-image: url('https://cdn.dribbble.com/userupload/4255581/file/original-1fd420b4be457443d40d7d73338fe172.jpg?compress=1&resize=1905x1248');
+    height: 100vh; */
     background-size: cover;
     margin-top: 5%;
+    background-color: black;
   ">
-  <div class="container">
-    <div class="d-flex align-items-center justify-content-evenly" style="height: 740px; width:1150px;">
-      <!-- <input class="btn btn-rot" type="button" onclick="location.href='';" value="" /> -->
-    </div>
-  </div>
-  </div>
   <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -100,11 +98,11 @@
         </div>
 
         {% for i in range(book_name|length) %}
-            <div class="col-md-3" style="margin-top:50px">
-                <div class="card">
+            <div class="col-md-3" style="margin-top:50px ">
+                <div class="card" style="background-color: black">
                     <div class="card-body">
                         <img class="card-img-top" src="{{ image[i] }}">
-                        <p class="text-white">{{ book_name[i] }}</p>
+                        <h4 class="text-white">{{ book_name[i] }}</h4>
                         <h4 class="text-white">{{ author[i] }}</h4>
                         <h4 class="text-white">Votes - {{ votes[i] }}</h4>
                         <h4 class="text-white">Rating - {{ rating[i] }}</h4>
@@ -112,10 +110,15 @@
                 </div>
             </div>
         {% endfor %}
-
-
     </div>
-</div>
+  </div>
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-evenly" style="height: 740px; width:1150px;">
+      <!-- <input class="btn btn-rot" type="button" onclick="location.href='';" value="" /> -->
+    </div>
+  </div>
+  </div>
+  
   <div id="root"></div>
 <!-- Background image -->
     <!-- Start your project here-->
@@ -124,7 +127,9 @@
     <!-- End your project here-->
 
     <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- <script type="text/javascript" src="js/mdb.min.js"></script> -->
+    <script src="{{ url_for('static', filename='mdb.min.js') }}"></script>
+
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
   </body>
