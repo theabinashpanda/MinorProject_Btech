@@ -1,7 +1,7 @@
-from flask import Flask,render_template
-import pickle
+from flask import Flask, render_template
+import pandas as pd
 
-popular_df=pickle.load(open("./artifacts/popular.pkl",'rb'))
+popular_df = pd.read_pickle("./artifacts/popular.pkl")
 
 app = Flask(__name__)
 
