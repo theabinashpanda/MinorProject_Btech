@@ -55,5 +55,18 @@ def contact():
 def abinash():
     return render_template('Abinash.html')
 
+@app.route('/Abhudaya.html')
+def abhudaya():
+    return render_template('Abhudaya.html')
+
+@app.route('/Gautam.html')
+def gautam():
+    return render_template('Gautam.html')
+
+@app.route('/Ankit.html')
+def ankit():
+    return render_template('Ankit.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
