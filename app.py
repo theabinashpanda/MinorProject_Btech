@@ -9,12 +9,6 @@ book_pivot=pd.read_pickle("book_pivot.pkl")
 books=pd.read_pickle("books.pkl")
 similarity_score=pd.read_pickle("similarity_score.pkl")
 
-# popular_books= pickle.load(open('popular_books.pkl', 'rb'))
-# book_pivot= pickle.load(open('book_pivot.pkl', 'rb'))
-# books= pickle.load(open('books.pkl', 'rb'))
-# similarity_score= pickle.load(open('similarity_score.pkl', 'rb'))
-
-
 app = Flask(__name__)
 
 @app.route('/')
