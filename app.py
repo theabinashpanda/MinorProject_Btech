@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 import pandas as pd
+import subprocess
 
 popular_books = pd.read_pickle("popular_books.pkl")
 book_pivot=pd.read_pickle("book_pivot.pkl")
@@ -70,6 +71,26 @@ def ankit():
 @app.route('/feedback')
 def feedback():
     return render_template('feedback.html')
+
+@app.route('/feedback_success.html')
+def feedback_success():
+    return render_template('feedback_success.html')
+
+@app.route('/submit_feedback', methods=['GET', 'POST'])
+def submit_feedback():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        feedback = request.form['feedback']
+
+        # execute PHP script with feedback data
+        php_script = 'submit_feedback.php'
+        command = f'php {php_script} "{name}" "{email}" "{feedback}"'
+        result = subprocess.check_output(command, shell=True)
+
+        return render_template('feedback_success.html')
+    else:
+        return render_template('feedback.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

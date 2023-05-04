@@ -60,17 +60,16 @@
       <h1 style="text-align: center; font-family: 'Montserrat', sans-serif; font-size: 3em; font-weight: 800; text-transform: uppercase; letter-spacing: 5px; color: white;margin-top:50px;">Feedback</h1>
 
 
-<div class="profile-section align-content-center " style="color:white">
-    <label for="name">Name:</label>
+<div class="profile-section align-content-center ">
+  <form action="feedback_success.html" method="post">
+    <label for="name" style="color:white">Name:</label>
     <input type="text" id="name" name="name" required><br><br>
-    
-    <label for="email">Email:</label>
+    <label for="email" style="color:white">Email:</label>
     <input type="email" id="email" name="email" required><br><br>
-    
-    <label for="feedback">Feedback:</label><br>
-    <textarea id="feedback" name="feedback" rows="10" cols="50"></textarea><br><br>
-    
+    <label for="feedback" style="color:white">Feedback:</label>
+    <textarea id="feedback" name="feedback" rows="5" cols="30" required></textarea><br><br>
     <input type="submit" value="Submit">
+  </form>
 </div>
 
 
