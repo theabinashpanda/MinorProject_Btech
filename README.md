@@ -6,4 +6,8 @@ This repository contains the group minor project done in 6th Semester of Btech. 
 pip install virtualenv
 virtualenv env
 env\Scripts\activate
-app.py (if this doesn't work try 'flask run')
+app.py 
+```
+if 'app.py' doesn't work try:
+```python
+flask run
