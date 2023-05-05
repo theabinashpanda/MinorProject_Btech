@@ -20,6 +20,7 @@ git clone https://github.com/theabinashpanda/MinorProject_Btech
 pip install virtualenv
 virtualenv env
 env\Scripts\activate
+pip install flask numpy pandas matplotlib seaborn
 app.py 
 ```
 if 'app.py' doesn't work try:
